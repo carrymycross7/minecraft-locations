@@ -1,0 +1,6 @@
+{
+  "worlds" : [
+    { "id": "1", "name": "Sarah And Dustin World"},
+    { "id": "2", "name": "Hotel World" }
+  ]
+}
