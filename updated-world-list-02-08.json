@@ -1,0 +1,77 @@
+[
+	{
+		"coord": "-236, 67, 205",
+		"description": "Skeleton Spawner",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-49, 63, 47",
+		"description": "Home",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-283, 64, 510",
+		"description": "Wrecked Ship on Land",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-852, 65, -785",
+		"description": "Jungle Village",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-735, 67, 996",
+		"description": "Iron Mine",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-451, 61, 769",
+		"description": "Sand Cave",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "1712, 63, 99",
+		"description": "Tower Stronghold",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "1764, 64, 806",
+		"description": "Large Forest Village",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "1556, 64, 803",
+		"description": "Large Pitfall",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-545, 68, 766",
+		"description": "Deep Sand Cave",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-2, 59, 6",
+		"description": "Nether Portal",
+		"dimension": "Nether"
+	},
+	{
+		"coord": "3, 40, 848",
+		"description": "Zombie Cave Spawner",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "-14, 126, 883",
+		"description": "Deepslate Cave Entrance",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "158, 101, 1129",
+		"description": "Jungle Cave Entrance",
+		"dimension": "Overworld"
+	},
+	{
+		"coord": "136, 63, -26",
+		"description": "Nether Fortress",
+		"dimension": "Nether"
+	}
+]
