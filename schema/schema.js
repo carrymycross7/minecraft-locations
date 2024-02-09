@@ -11,10 +11,10 @@ const {
 
 const WorldType = new GraphQLObjectType({
     name: 'World',
-    fields: {
+    fields: () => ({
         id: { type: GraphQLString },
         name: { type: GraphQLString }
-    }
+    })
 });
 
 const RootQuery = new GraphQLObjectType({
@@ -24,7 +24,8 @@ const RootQuery = new GraphQLObjectType({
             type: WorldType,
             args: { id: { type: GraphQLString } },
             resolve(parentValue, args) {
-               console.log(args); // debug - remove
+                return axios.get(`http://localhost:3000/worlds/${args.id}`)
+                    .then(res => res.data)
             }
         }
     }
