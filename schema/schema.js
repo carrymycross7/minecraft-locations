@@ -4,16 +4,18 @@ const {response} = require("express");
 
 const {
     GraphQLObjectType,
+    GraphQLNonNull,
     GraphQLString,
     GraphQLInt,
     GraphQLSchema
 } = graphql;
 
-const WorldType = new GraphQLObjectType({
+const LocationType = new GraphQLObjectType({
     name: 'World',
     fields: () => ({
         id: { type: GraphQLString },
-        name: { type: GraphQLString }
+        name: { type: GraphQLString },
+        description: {type: GraphQLString}
     })
 });
 
@@ -21,7 +23,7 @@ const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
         world: {
-            type: WorldType,
+            type: LocationType,
             args: { id: { type: GraphQLString } },
             resolve(parentValue, args) {
                 return axios.get(`http://localhost:3000/worlds/${args.id}`)
@@ -31,6 +33,24 @@ const RootQuery = new GraphQLObjectType({
     }
 });
 
+const mutation = new GraphQLObjectType({
+    name: "Mutation",
+    fields: {
+        addLocation: {
+            type: LocationType,
+            args:{
+                name: {type: new GraphQLNonNull(GraphQLString)},
+                description: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parentValue, {name,description}) {
+                return axios.post('http://localhost:8000/worlds', {name,description})
+                    .then(res => res.data)
+            }
+        }
+    }
+});
+
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation
 });
