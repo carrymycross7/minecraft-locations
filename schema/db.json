@@ -1,6 +1,19 @@
 {
-  "worlds" : [
-    { "id": "1", "name": "Sarah And Dustin World"},
-    { "id": "2", "name": "Hotel World" }
+  "worlds": [
+    {
+      "id": "1",
+      "name": "Sarah And Dustin World",
+      "description": "testing"
+    },
+    {
+      "id": "2",
+      "name": "Hotel World",
+      "description": "testing"
+    },
+    {
+      "id": "6d0b",
+      "name": "Test",
+      "description": "test adding a new world"
+    }
   ]
 }
