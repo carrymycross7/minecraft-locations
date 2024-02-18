@@ -1,7 +1,7 @@
 const express = require('express');
 const expressGraphQL = require('express-graphql').graphqlHTTP;
 const mongoose = require('mongoose');
-const schema = require('./schema/schema');
+const schema = require('../schema/schema');
 
 const CONNCECTION_URI = 'mongodb://localhost:27017/minecraft';
 
@@ -23,3 +23,5 @@ mongoose.connect(CONNCECTION_URI, {
 app.listen(4000, () => {
   console.log('Listening');
 });
+
+module.exports = app;
