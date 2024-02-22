@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const LocationSchema = {
+const LocationSchema = new Schema({
     world: {
         type: Schema.Types.ObjectId,
         ref: 'world'
@@ -9,7 +9,7 @@ const LocationSchema = {
     coord: {type: String},
     description: {type: String},
     dimension: {type: String}
-}
+});
 
 LocationSchema.statics.like = function(id) {
     const Location = mongoose.model('location');

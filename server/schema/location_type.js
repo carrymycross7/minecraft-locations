@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const graphql = require('graphql');
-const {Location} = require("graphql");
+
 const {
     GraphQLObjectType,
     GraphQLList,

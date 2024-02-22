@@ -10,10 +10,11 @@ const {
 const LocationType = require('./location_type');
 const World = mongoose.model('world');
 
-const WorldType = {
+const WorldType = new GraphQLObjectType({
     name: "WorldType",
     fields: () => ({
          id: {type: GraphQLID},
+        description: {type: GraphQLString},
         name: {type: GraphQLString},
         locations: {
              type: new GraphQLList(LocationType),
@@ -22,6 +23,6 @@ const WorldType = {
             }
         }
     })
-};
+});
 
 module.exports = WorldType;

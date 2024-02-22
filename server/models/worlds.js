@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const WorldSchema = {
+const WorldSchema = new Schema({
     name: {type: String},
     description: {type: String},
     locations: [
@@ -10,7 +10,7 @@ const WorldSchema = {
             ref: 'location'
         }
     ]
-}
+});
 
 WorldSchema.statics.findWorld = function (id) {
     return this.findById(id)
