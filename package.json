@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.9.5",
+    "@apollo/react-hooks": "^4.0.0",
     "apollo": "^2.34.0",
+    "apollo-boost": "^0.4.9",
     "axios": "^1.6.5",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -24,6 +27,7 @@
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
     "html-webpack-plugin": "^2.26.0",
     "json-server": "^1.0.0-alpha.16",
     "lodash": "^4.17.21",
